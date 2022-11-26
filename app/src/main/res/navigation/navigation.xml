@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.navigationexample.HomeFragment"
+        android:label="homeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_nextFragment"
+            app:destination="@id/nextFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nextFragment"
+        android:name="com.example.navigationexample.NextFragment"
+        android:label="nextFragment"
+        tools:layout="@layout/fragment_next">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.navigationexample.SettingFragment"
+        android:label="settingFragment"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.example.navigationexample.GalleryFragment"
+        android:label="galleryFragment"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/slideshowFragment"
+        android:name="com.example.navigationexample.SlideshowFragment"
+        android:label="slideshowFragment"
+        tools:layout="@layout/fragment_slideshow" />
+</navigation>
